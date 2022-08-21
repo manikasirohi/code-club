@@ -1,0 +1,65 @@
+<%- include("header") -%>
+
+    <!-- Form start -->
+
+        <section>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col">
+                        <form  method="POST" action="/register">
+                            <div class="mb-3">
+                                <h3 class="contact-us">Contact us</h3>
+                                <label  for="name" class="form-label">Full name:</label>
+                                <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" >
+                                <div class="invalid-feedback">You did't enter a correct name</div>
+                            </div>
+                            <div class="mb-3">
+                                <label  for="myemail" class="form-label">Email:</label>
+                                <input name="myemail" type="text" class="form-control" id="myemail" >
+                                <div class="invalid-feedback">You did't enter a correct email</div>
+                            </div>
+                            <div class="mb-3">
+                                <label  for="contact" class="form-label">Contact no:</label>
+                                <input name="contact" type="text" class="form-control" id="contact" >
+                                <div class="invalid-feedback">You did't enter a correct contact no</div>
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-check-label" for="train">Training type:</label>
+                                <select name="trainingType" class="form-select" aria-label="Default select example" id="training type" >
+                                <option selected value="select">select</option>
+                                <option value="online">online</option>
+                                <option value="offline">offline</option>
+                                </select>
+                                <div class="invalid-feedback">You did't choose a option</div>
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-check-label" for="course">Courses:</label>
+                                <select name="course" class="form-select" aria-label="Default select example" id="course" >
+                                <option selected value="c_select">select</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="Core Java">Core Java</option>
+                                <option value="Python with data science">Python with data science</option>
+                                <option value="Full statck web developement">Full stack web developement</option>
+                                <option value="Android Developement">Android Developement</option>
+                                </select>
+                                <div class="invalid-feedback">You did't choose a option</div>
+                            </div>
+                            <!-- <div class="form-outline">
+                                 <label  class="form-label" for="msg">Message:</label>
+                                 <textarea name="msg"class="form-control" id="msg" rows="4" ></textarea>
+                                 <div class="invalid-feedback">You did't enter a correct Message</div>
+                               
+                            </div> -->
+                            <button type="submit" value="submit" class="mt-2 btn btn-dark">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Form ends -->
+    
+    
+</body>
+</html>

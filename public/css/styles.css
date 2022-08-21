@@ -1,0 +1,71 @@
+.hero{
+    width: 100%;
+    height: auto;
+    /* margin-left: 12rem; */
+}
+.orange{
+    color: orangered;
+}
+.holo{
+    margin-left: 6rem;
+}
+.holo a{
+    text-decoration: none;
+}
+.orange{
+    color: orangered;
+}
+.down{
+    text-decoration: none;
+    color: grey;
+}
+.down:hover{
+    color: white;
+}
+.down2{
+    text-decoration: none;
+}
+/* .bord{
+    border: 1px solid black;
+    width: auto;
+    margin-left: 30%;
+    /* background-color: aquamarine; */
+ */
+form{
+    background-color: yellowgreen;
+}
+
+
+/* Media query for cards */
+@media (max-width:376px){
+    .img-cent{
+        margin-left: -2.9rem;
+        /* margin-top: 2rem; */
+    }
+}
+
+.girl-img{
+    /* align-items: center; */
+    display: block;
+  margin-left: 100px;
+  /* margin-right: auto; */
+  width: 50%;
+}
+.contact-us{
+    text-align: center;
+}
+.thankyou {
+    height: 500px;
+    position: relative;
+    border: 3px solid green;
+}
+.vertical-centre {
+
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 400px;
+}
