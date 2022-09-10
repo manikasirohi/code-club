@@ -7,6 +7,7 @@ mongoose.connect("mongodb+srv://manika:manika@cluster0.z8dv2uk.mongodb.net/?retr
 const app= express();
 app.set('view engine','ejs');
 // app.use(express.static(__dirname + '/public'));
+var port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -71,12 +72,10 @@ app.get("/thankyou",(req,res)=>{
     res.render('thankyou')
 })
 
-let port = process.env.PORT;
-if(port==null || port ==""){
-    port==3000
-}
-app.listen(port,()=>{
-    console.log("server started sucessfully");
-})
+
+app.listen(port,function(){
+    console.log('Running at Port 3000');
+  
+  });
 
 module.exports = router;
