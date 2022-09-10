@@ -2,7 +2,8 @@ const express =require ("express");
 const mongoose= require ("mongoose");
 const bodyParser=require ("body-parser")
 var router = express.Router();
-mongoose.connect("mongodb://0.0.0.0:27017/codeclub",{useNewUrlParser:true});
+// mongoose.connect("mongodb://0.0.0.0:27017/codeclub",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://manika:manika@cluster0.z8dv2uk.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser:true});
 const app= express();
 app.set('view engine','ejs');
 // app.use(express.static(__dirname + '/public'));
@@ -70,9 +71,12 @@ app.get("/thankyou",(req,res)=>{
     res.render('thankyou')
 })
 
-
-app.listen(3000,()=>{
-    console.log("server started on the port 3000");
+let port = process.env.PORT;
+if(port==null || port ==""){
+    port==3000
+}
+app.listen(port,()=>{
+    console.log("server started sucessfully");
 })
 
 module.exports = router;
