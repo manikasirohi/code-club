@@ -16,14 +16,11 @@ const codeSchema= new mongoose.Schema({
     fullName: {
         type :String,
         required :"Name is required",
-
     },
     email: {
     type: String,
-    trim: true,
-    lowercase: true,
     unique: true,
-    required: "Email address is required",
+    required: true,
     },
     contactNo: {
         type: Number,
@@ -33,7 +30,6 @@ const codeSchema= new mongoose.Schema({
     },
     trainingType: {
         type:String,
-        default : offline,
         required: true
     },
     courseType:{
