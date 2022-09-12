@@ -13,11 +13,38 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 const codeSchema= new mongoose.Schema({
-    fullName: String,
-    email: String,
-    contactNo: Number,
-    trainingType: String,
-    courseType: String
+    fullName: {
+        type :String,
+        required :"Name is required",
+
+    },
+    email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+    unique: true,
+    required: "Email address is required",
+    validate: [validateEmail, "Please fill a valid email address"],
+    match: [
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      "Please fill a valid email address",
+    ],
+    },
+    contactNo: {
+        type: Number,
+        required : true,
+        min: 10,
+        max: 10
+    },
+    trainingType: {
+        type:String,
+        default : offline,
+        required: true
+    },
+    courseType:{
+        type: String,
+        required: true
+    }
 })
 
 const Entry= mongoose.model("Entry", codeSchema);
